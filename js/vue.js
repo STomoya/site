@@ -15,8 +15,8 @@ var news = new Vue({
             }
         }
     },
-    async mounted () {
-        await axios.get("https://stomoya.github.io/json/news.json", {params: {async: true}}).then(response => (this.news = response.data))
+    mounted () {
+        axios.get("https://stomoya.github.io/json/news.json").then(response => (this.news = response.data))
     }
 })
 
@@ -25,8 +25,8 @@ var trend = new Vue({
     data: {
         trends: []
     },
-    async mounted () {
-        await axios.get("https://stomoya.github.io/json/trends.json").then(response => (this.trends = response.data.trends))
+    mounted () {
+        axios.get("https://stomoya.github.io/json/trends.json").then(response => (this.trends = response.data.trends))
     }
 })
 
@@ -35,7 +35,7 @@ var achievement = new Vue({
     data: {
         achievements: []
     },
-    async mounted () {
-        await axios.get("https://stomoya.github.io/json/achievements.json").then(response => (this.achievements = response.data))
+    mounted () {
+        axios.get("https://stomoya.github.io/json/achievements.json").then(response => (this.achievements = response.data))
     }
 })
