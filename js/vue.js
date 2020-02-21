@@ -14,21 +14,17 @@ var news = new Vue({
             else {
                 this.lang = 'en'
             }
+        },
+        limited_item: function () {
+            if (this.news.length > this.max) {
+                this.news = this.news.slice(0, this.max)
+            }
         }
     },
     mounted () {
         axios.get("https://stomoya.github.io/json/news.json").then(response => (this.news = response.data))
+        this.limited_item()
     },
-    computed: {
-        limited_item: function () {
-            if (this.news.length > this.max) {
-                return this.news.slice(0, this.max)
-            } else {
-                return this.news
-            }
-            
-        }
-    }
 })
 
 var trend = new Vue({
