@@ -18,6 +18,16 @@ var news = new Vue({
     },
     mounted () {
         axios.get("https://stomoya.github.io/json/news.json").then(response => (this.news = response.data))
+    },
+    computed: {
+        limited_item: function () {
+            if (this.news.length > this.max) {
+                return this.news.slice(0, this.max)
+            } else {
+                return this.news
+            }
+            
+        }
     }
 })
 

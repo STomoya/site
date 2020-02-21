@@ -107,13 +107,14 @@
                 <button @click="change_lang()" class="col-md-1 btn btn-outline-secondary">{{ lang }}</button>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item" v-for="(one, index) in news">
-                    <div class="row" v-if="index < max">
+                <li class="list-group-item" v-for="one in limited_item">
+                    <div class="row">
                         <div class="col-md-2">{{ one.year }}/{{ one.month }}/{{ one.day }}</div>
                         <div v-if="lang === 'en'" class="col-md-10">{{ one.jtext }}</div>
                         <div v-else class="col-md-10">{{ one.etext }}</div>
                     </div>
                 </li>
+                <a href="/news.html" class="list-group-item list-group-item-action text-right">more</a>
             </ul>
         </div>
 
@@ -182,7 +183,7 @@
     
     <!-- footer -->
     <footer class="footer mt-auto py-3 text-center">
-        <span class="text-muted">&copy; 2020 STomoya All Rights Reserved</span>
+        <small class="text-muted">&copy; 2020 STomoya All Rights Reserved</small>
     </footer>
 
     <script src="js/vue.js"></script>
