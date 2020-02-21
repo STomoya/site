@@ -2,6 +2,13 @@
     {
         "year": 2020,
         "month": 2,
+        "day": 19,
+        "jtext": "卒業論文発表会を行いました.",
+        "etext": "I made a presentation about my graduation thesis."
+    },
+    {
+        "year": 2020,
+        "month": 2,
         "day": 12,
         "jtext": "卒業論文を提出しました.",
         "etext": "I have submitted my graduation thesis."
