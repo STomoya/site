@@ -107,8 +107,8 @@
                 <button @click="change_lang()" class="col-md-1 btn btn-outline-secondary">{{ lang }}</button>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item" v-for="one in news">
-                    <div class="row">
+                <li class="list-group-item" v-for="(one, index) in news">
+                    <div class="row" v-if="index < max">
                         <div class="col-md-2">{{ one.year }}/{{ one.month }}/{{ one.day }}</div>
                         <div v-if="lang === 'en'" class="col-md-10">{{ one.jtext }}</div>
                         <div v-else class="col-md-10">{{ one.etext }}</div>

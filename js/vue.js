@@ -2,6 +2,7 @@
 var news = new Vue({
     el: '#news',
     data: {
+        max: 3,
         lang: 'en',
         news: []
     },
