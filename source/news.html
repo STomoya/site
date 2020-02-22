@@ -38,6 +38,7 @@
     <style>ion-icon {color: black;}</style>
     <!-- vue.js -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src='https://unpkg.com/v-calendar@next'></script>
     <!-- axios -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
@@ -47,29 +48,20 @@
             <h4 class="col-md-11">News</h4>
             <button @click="change_lang()" class="col-md-1 btn btn-outline-secondary">{{ lang }}</button>
         </div>
-        <div class="input-group justify-content-center">
-            <h5 class="input-group-text col-md-8">{{year}} / {{month}}</h5>
-            <div class="input-group-append">
-                <div class="input-group-text">YEAR</div>
-                <select class="custom-select" v-model="year">
-                    <option v-for="one in years">{{one}}</option>
-                </select>
-                <div class="input-group-text">MONTH</div>
-                <select class="custom-select" v-model="month">
-                    <option v-for="one in months">{{one}}</option>
-                </select>
+        <div class="row mx-0">
+            <div class="col-md-4 mb-3 d-flex justify-content-center"><v-calendar :attributes="attributes" @dayclick="dayClicked"></v-calendar></div>
+            <div class="col-md-8">
+                <div v-if="selectedDay" class="text-center">
+                    <h3>{{ selectedDay.date.toDateString() }}</h3>
+                    <div v-for="attr in selectedDay.attributes" class="card w-100 h-100">
+                        <div class="card-body" >
+                            <p v-if="lang === 'en'" class="card-text">{{ attr.customData.jtext }}</p>
+                            <p v-else class="card-text">{{ attr.customData.etext }}</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <br>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item" v-for="show in shows">
-                <div class="row">
-                    <div class="col-md-2 text-center">{{ show.day }}</div>
-                    <div v-if="lang === 'en'" class="col-md-10">{{ show.jtext }}</div>
-                    <div v-else class="col-md-10">{{ show.etext }}</div>
-                </div>
-            </li>
-        </ul>
     </div>
 
     <!-- footer -->
