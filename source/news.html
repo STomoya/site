@@ -42,17 +42,46 @@
     <!-- axios -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
-<body>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-md navbar-light bg-light shadow">
+        <a class="navbar-brand" href="#">STomoya</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#top_navbar" aria-controls="top_navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="top_navbar">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/source/news.html">News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/source/projects.html">Projects</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="navbar-item">
+                    <a href="http://github.com/STomoya/" class="btn btn-outline-secondary"><ion-icon name="logo-github"></ion-icon></a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#/" class="btn btn-outline-secondary"><ion-icon name="logo-twitter"></ion-icon></ion-icon></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
     <div class="container" id="news">
-        <div class="row p-2 rounded-lg my-3 mx-0" style="background-color: lightblue;">
-            <h4 class="col-md-11">News</h4>
+        <div class="row p-2 rounded-lg my-3 mx-0">
+            <h3 class="col-md-11">News</h3>
             <button @click="change_lang()" class="col-md-1 btn btn-outline-secondary">{{ lang }}</button>
         </div>
         <div class="row mx-0">
             <div class="col-md-4 mb-3 d-flex justify-content-center"><v-calendar :attributes="attributes" @dayclick="dayClicked"></v-calendar></div>
             <div class="col-md-8">
                 <div v-if="selectedDay" class="text-center">
-                    <h3>{{ selectedDay.date.toDateString() }}</h3>
+                    <h3 class="mb-4">{{ selectedDay.date.toDateString() }}</h3>
                     <div v-for="attr in selectedDay.attributes" class="card w-100 h-100">
                         <div class="card-body" >
                             <p v-if="lang === 'en'" class="card-text">{{ attr.customData.jtext }}</p>
