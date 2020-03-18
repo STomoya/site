@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+    jinja:
+        build:
+            context: .
+            dockerfile: ./docker/Dockerfile
+        tty: true
+        volumes:
+            - .:/usr/src
