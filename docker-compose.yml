@@ -8,3 +8,5 @@ services:
         tty: true
         volumes:
             - .:/usr/src
+        working_dir: /usr/src
+        command: python build.py
