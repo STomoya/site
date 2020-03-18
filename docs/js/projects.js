@@ -17,6 +17,6 @@ var projects = new Vue({
         },
     },
     mounted () {
-        axios.get("https://stomoya.github.io/json/projects.json").then(response => (this.projects = response.data));
+        axios.get("https://stomoya.github.io/docs/json/projects.json").then(response => (this.projects = response.data));
     },
 })
