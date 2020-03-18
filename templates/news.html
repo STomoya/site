@@ -1,0 +1,32 @@
+{% extends 'partials/layout.html' %}
+
+{% block additional %}
+<script src='https://unpkg.com/v-calendar@next'></script>
+{% endblock %}
+
+{% block body %}
+<div class="container" id="news">
+    <div class="row p-2 rounded-lg my-3 mx-0">
+        <h3 class="col-md-11">News</h3>
+        <button @click="change_lang()" class="col-md-1 btn btn-outline-secondary">[[ lang ]]</button>
+    </div>
+    <div class="row mx-0">
+        <div class="col-md-4 mb-3 d-flex justify-content-center"><v-calendar :attributes="attributes" @dayclick="dayClicked"></v-calendar></div>
+        <div class="col-md-8">
+            <div v-if="selectedDay" class="text-center bg-light p-3 shadow-sm rounded">
+                <h3 class="mb-4">[[ selectedDay.date.toDateString() ]]</h3>
+                <div v-for="attr in selectedDay.attributes" class="card">
+                    <div class="card-body" >
+                        <p v-if="lang === 'en'" class="card-text">[[ attr.customData.jtext ]]</p>
+                        <p v-else class="card-text">[[ attr.customData.etext ]]</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script src="js/news.js"></script>
+{% endblock %}

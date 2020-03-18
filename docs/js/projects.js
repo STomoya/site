@@ -1,6 +1,7 @@
 
 var projects = new Vue({
     el: '#projects',
+    delimiters: ["[[", "]]"],
     data: {
         lang: 'en',
         projects: [],

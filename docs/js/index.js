@@ -1,6 +1,7 @@
 
 var news = new Vue({
     el: '#news',
+    delimiters: ["[[", "]]"],
     data: {
         max: 3,
         lang: 'en',
@@ -29,6 +30,7 @@ var news = new Vue({
 
 var trend = new Vue({
     el: '#trends',
+    delimiters: ["[[", "]]"],
     data: {
         trends: []
     },
@@ -39,6 +41,7 @@ var trend = new Vue({
 
 var achievement = new Vue({
     el: '#achievement',
+    delimiters: ["[[", "]]"],
     data: {
         achievements: []
     },

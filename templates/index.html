@@ -1,0 +1,146 @@
+{% extends 'partials/layout.html' %}
+
+{% block body %}
+<!-- card -->
+<div class="card mb-4 shadow-lg bg-light" id="profile">
+    <div class="container my-3">
+        <div class="row no-gutters">
+            <div class="col-md-4">
+                <img src="image/sawada.jpg" class="card-img" alt="Sawada Tomoya">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body text-center">
+                    <!-- name -->
+                    <div class="mx1">
+                        <h5 class="card-title">澤田 知也</h5>
+                        <p class="card-text">Tomoya Sawada</p>
+                    </div>
+                    <hr>
+                    <!-- birthday -->
+                    <div class="mb-1">
+                        <div class="card-text">1998/01/10</div>
+                    </div>
+                    <hr>
+                    <!-- affiliation -->
+                    <div class="mb-1">
+                        <a href="https://mm.doshisha.ac.jp/" class="text-decoration-none text-reset">
+                            <p>同志社大学 理工学部 インテリジェント情報工学科 知的機構研究室<br>
+                            Doshisha Universtiy, Department of Intelligent Information Engineering and Sciences<br>Intelligent Mechanism Laboratory</p>
+                        </a>
+                    </div>
+                    <hr>
+                    <!-- contact -->
+                    <div class="mb-1">
+                        <div class="card-text">
+                            <p>sawada[AT]mm.doshisha.ac.jp<br>
+                                blackie0110[AT]gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- trends -->
+    <div class="card-footer" id="trends">
+        <div class="container">
+            <h6>Current Trends</h6>
+            <div>
+                <span v-for="trend in trends" class="badge badge-pill badge-light ml-2">{{ trend }}</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- news -->
+<div class="mb-5" id="news">
+    <div class="container">
+        <div class="row p-2 rounded-lg mb-3 mx-0">
+            <h4 class="col-md-11">News</h4>
+            <button @click="change_lang()" class="col-md-1 btn btn-outline-light">[[ lang ]]</button>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item bg-info" v-for="one in news">
+                <div class="row">
+                    <div class="col-md-2">[[ one.year ]]/[[ one.month ]]/[[ one.day ]]</div>
+                    <div v-if="lang === 'en'" class="col-md-10">[[ one.jtext ]]</div>
+                    <div v-else class="col-md-10">[[ one.etext ]]</div>
+                </div>
+            </li>
+            <a href="/news.html" class="list-group-item list-group-item-action text-right bg-info" >more &rarr;</a>
+        </ul>
+    </div>
+</div>
+
+<!-- background -->
+<div class="mb-4 shadow-lg py-4 bg-light" id="background">
+    <div class="container">
+        <div class="row p-2 rounded-lg mb-3 mx-0">
+            <h4 class="col-md-12">Academic Background</h4>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item bg-light">
+                <div class="row">
+                    <div class="col-md-1">2020/04</div>
+                    <div class="col-md-11">
+                        <h5>同志社大学大学院 理工学研究科 情報工学専攻 知的機構研究室<br></h5>
+                        <h6>Doshisha University, Graduate School of Science and Engineering, Department of Information Engineering, Intelligent Mechanism Laboratory</h6>
+                    </div> 
+                </div>
+            </li>
+            <li class="list-group-item bg-light">
+                <div class="row">
+                    <div class="col-md-1">2019/04</div>
+                    <div class="col-md-11">
+                        <h5>同志社大学 理工学部 インテリジェント情報工学科 知的機構研究室<br></h5>
+                        <h6>Doshisha Universtiy, Department of Intelligent Information Engineering and Sciences, Intelligent Mechanism Laboratory</h6>
+                    </div> 
+                </div>
+            </li>
+            <li class="list-group-item bg-light">
+                <div class="row">
+                    <div class="col-md-1">2016/04</div>
+                    <div class="col-md-11">
+                        <h5>同志社大学 理工学部 インテリジェント情報工学科</h5>
+                        <h6>Doshisha Universtiy, Department of Intelligent Information Engineering and Sciences</h6>
+                    </div> 
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- work experience -->
+<div class="mb-5" id="work">
+    <div class="container">
+        <div class="row p-2 rounded-lg mb-3 mx-0">
+            <h4 class="col-md-12">Work Experience</h4>
+        </div>
+        <ul class="list-group list-group-flush">
+        </ul>
+    </div>
+</div>
+
+<!-- achievement -->
+<div class="mb-5 py-4 bg-light shadow-lg" id="achievement">
+    <div class="container">
+        <div class="row p-2 rounded-lg mb-3 mx-0">
+            <h4 class="col-md-12">Achievement</h4>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li v-for="achievement in achievements" class="list-group-item bg-light">
+                <div class="row">
+                    <div class="col-md-1">[[ achievement.year ]]/[[ achievement.month ]]</div>
+                    <div class="col-md-11" style="font-size: 15px;">
+                        <p>[[ achievement.text ]]</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script src="js/index.js"></script>
+{% endblock %}

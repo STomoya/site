@@ -1,6 +1,7 @@
 
 var news = new Vue({
     el: '#news',
+    delimiters: ["[[", "]]"],
     data: {
         lang: 'en',
         news: [],
