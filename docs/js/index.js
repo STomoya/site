@@ -23,7 +23,7 @@ var news = new Vue({
         }
     },
     mounted () {
-        axios.get("https://stomoya.github.io/source/json/news.json").then(response => (this.news = response.data))
+        axios.get("https://stomoya.github.io/json/news.json").then(response => (this.news = response.data))
         this.limited_item()
     },
 })
