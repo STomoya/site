@@ -35,7 +35,7 @@ var trend = new Vue({
         trends: []
     },
     mounted () {
-        axios.get("https://stomoya.github.io/source/json/trends.json").then(response => (this.trends = response.data.trends))
+        axios.get("https://stomoya.github.io/docs/json/trends.json").then(response => (this.trends = response.data.trends))
     }
 })
 
@@ -46,6 +46,6 @@ var achievement = new Vue({
         achievements: []
     },
     mounted () {
-        axios.get("https://stomoya.github.io/source/json/achievements.json").then(response => (this.achievements = response.data))
+        axios.get("https://stomoya.github.io/docs/json/achievements.json").then(response => (this.achievements = response.data))
     }
 })
