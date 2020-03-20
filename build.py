@@ -1,7 +1,7 @@
 from jinja2 import Environment, FileSystemLoader
 
 base_folder = './templates'
-build_folder = './docs/'
+build_folder = './'
 
 pages = [
     'index.html',
