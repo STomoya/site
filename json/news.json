@@ -1,6 +1,13 @@
 [
     {
         "year": 2020,
+        "month": 3,
+        "day": 22,
+        "jtext": "同志社大学を卒業しました.",
+        "etext": "I have graduated Doshisha University."
+    },
+    {
+        "year": 2020,
         "month": 2,
         "day": 19,
         "jtext": "卒業論文発表会を行いました.",
