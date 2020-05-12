@@ -6,7 +6,6 @@
         "docker-compose",
         "nvidia-docker",
         "python",
-        "pytorch",
-        "Rust"
+        "pytorch"
     ]
 }
