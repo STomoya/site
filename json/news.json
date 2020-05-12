@@ -1,6 +1,20 @@
 [
     {
         "year": 2020,
+        "month": 5,
+        "day": 7,
+        "jtext": "ICASSP 2020のプレゼンテーション動画が公開されました.",
+        "etext": "My presentation video is opened in ICASSP 2020."
+    },
+    {
+        "year": 2020,
+        "month": 4,
+        "day": 2,
+        "jtext": "同志社大学院に入学しました.",
+        "etext": "I have entered the graduate school of Doshisha University."
+    },
+    {
+        "year": 2020,
         "month": 3,
         "day": 22,
         "jtext": "同志社大学を卒業しました.",
