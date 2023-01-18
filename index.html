@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <meta name="keywords" content="profile">
     <meta name="author" content="Sawada Tomoya">
@@ -33,7 +33,7 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-    
+
             <div class="collapse navbar-collapse" id="navbarsExample05">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
@@ -62,7 +62,7 @@
                 <img class="img-fluid" src="image/sawada.jpg" alt="TomoyaSawada">
             </div>
             <div class="col-md-8">
-                <table class="table">
+                <table class="table small">
                     <tbody>
                         <tr class="mt-2">
                             <th class="align-middle" scope="row">name</th>
@@ -70,7 +70,7 @@
                         </tr>
                         <tr class="mt-2">
                             <th class="align-middle" scope="row">affiliation</th>
-                            <td><a href="https://mm.doshisha.ac.jp/" class="text-reset text-decoration-none"><p class="text-wrap">Doshisha Universtiy<br>Department of Intelligent Information Engineering and Sciences<br>Intelligent Mechanism Laboratory</p>
+                            <td><a href="https://mm.doshisha.ac.jp/" class="text-reset text-decoration-none"><p class="text-wrap">Doshisha Universtiy<br>Graduate School of Science and Engineering<br>Intelligent Mechanism Laboratory</p>
                                 <h5>同志社大学大学院 理工学研究科 情報工学専攻 知的機構研究室</h5></a></td>
                             </tr>
                             <tr class="mt-2">
@@ -90,22 +90,26 @@
                 <span class="badge rounded-pill bg-secondary mx-1" v-for="topic in topics">{{ topic }}</span>
             </div>
         </div>
-            
+
         <div class="container mt-5" id="background">
             <h2>Academic Background</h2>
-            <table class="table">
+            <table class="table small">
                 <tbody>
                     <tr class="mt-2">
-                        <th class="align-middle col-md-2" scope="row">2016</th>
-                        <td>同志社大学 理工学部 インテリジェント情報工学科 入学</td>
+                        <th class="align-middle col-md-2" scope="row">2022/04 ~ current</th>
+                        <td>同志社大学大学院 理工学研究科 情報工学専攻 博士後期課程</td>
                     </tr>
-                    <tr class="mt-2">
-                        <th class="align-middle col-md-2" scope="row">2019</th>
+                    <tr class="mt-2 text-muted">
+                        <th class="align-middle col-md-2" scope="row">2020/04 ~ 2022/03</th>
+                        <td>同志社大学大学院 理工学研究科 情報工学専攻 博士前期課程</td>
+                    </tr>
+                    <tr class="mt-2 text-muted">
+                        <th class="align-middle col-md-2" scope="row">2019/04 ~</th>
                         <td>知的機構研究室 配属</td>
                     </tr>
-                    <tr class="mt-2">
-                        <th class="align-middle col-md-2" scope="row">2020</th>
-                        <td>同志社大学大学院 理工学研究科 情報工学専攻 入学</td>
+                    <tr class="mt-2 text-muted">
+                        <th class="align-middle col-md-2" scope="row">2016/04 ~ 2020/03</th>
+                        <td>同志社大学 理工学部 インテリジェント情報工学科</td>
                     </tr>
                 </tbody>
             </table>
@@ -113,11 +117,27 @@
 
         <div class="container mt-5" id="achievement">
             <h2>Achievements</h2>
-            <table>
+            <h4>International</h4>
+            <table class="table small">
                 <tbody>
                     <tr class="mt-2">
                         <th class="align-middle col-md-2" scope="row">2020/01</th>
-                        <td>T. Sawada and M. Katsurai, "A Deep Multimodal Approach for Map Image Classification," 2020 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), Barcelona, Spain, 2020, pp. 4457-4461</td>
+                        <td>T. Sawada and M. Katsurai, "A Deep Multimodal Approach for Map Image Classification," 2020 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), Barcelona, Spain, pp. 4457-4461, (2020)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4>日本</h4>
+            <table class="table small">
+                <tbody>
+                    <tr class="mt-2">
+                        <th class="align-middle col-md-2" scope="row">2021/11</th>
+                        <td>澤田知也, 桂井麻里衣, "Character Illustration Deformation via Unpaired Image-to-Image Translation," 第36回信号処理シンポジウム, pp. 38-43, (2021)
+                        </td>
+                    </tr>
+                    <tr class="mt-2">
+                        <th class="align-middle col-md-2" scope="row">2021/11</th>
+                        <td>澤田知也, 桂井麻里衣, "深層学習を用いたキャラクタ画像のデフォルメ化," NICOGRAPH 2021, pp. P-22:1-P-22:2, (2021)
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -125,9 +145,9 @@
 
         <div class="container my-5" id="projects">
             <h2>Projects</h2>
-            <div class="row">
+            <div class="row small">
                 <div class="col-lg-4" v-for="project in projects">
-                    <div class="card">
+                    <div class="card mb-2">
                         <div class="card-body">
                             <div class="card-title">{{ project.name }}</div>
                             <div class="card-text">{{ project.description }}</div>
@@ -140,12 +160,12 @@
 
         <footer class="footer mt-auto py-3 bg-light">
             <div class="container">
-                <span class="text-muted">&copy; Tomoya Sawada 2021</span>
+                <span class="text-muted">&copy; Tomoya Sawada 2021-2023</span>
             </div>
         </footer>
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+<!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
         <script src="js/index.js"></script>
     </body>
 </html>
