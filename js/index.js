@@ -32,6 +32,13 @@ var project = new Vue({
                 links: [
                     { name: "github", url: "https://github.com/STomoya/storch"},
                 ]
+            },
+            {
+                name: "ptfid",
+                description: "Calculating Fréchet inception distance and other metrics with PyTorch",
+                links: [
+                     { name: "github", url: "https://github.com/STomoya/ptfid"},
+                ]
             }
         ]
     }
